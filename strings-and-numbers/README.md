@@ -34,6 +34,7 @@ Specificity calculation is simple.
 For example, let's represent the number of `#id` , `.class`, `tagname` selectors as array (in order from worst to best):
 
 Selector | Specifity (`#id`,`.class`,`tagname`)
+--- | ---
 `*` | 0, 0, 0
 `span` | 0, 0, 1
 `body p` | 0, 0, 2
