@@ -11,7 +11,7 @@ import static org.junit.Assert.assertTrue;
 public class BinaryTreeTest {
 
     @Test
-    public void test() {
+    public void test() throws Exception{
         BinaryTree tree = new BinaryTree();
 
         /*

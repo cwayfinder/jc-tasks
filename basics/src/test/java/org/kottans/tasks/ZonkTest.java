@@ -26,14 +26,31 @@ import static org.junit.Assert.assertEquals;
 public class ZonkTest {
 
     @Test
-    public void test() {
+    public void testNoCombinations() throws Exception {
+        Zonk zonk = new Zonk();
+
+        assertEquals(0, zonk.getScore(new int[]{2,3,4}));    // returns 0 = no combinations here
+        assertEquals(0, zonk.getScore(new int[]{2,3,4,3,6,6}));    // returns 0 = no combinations here
+        assertEquals(0, zonk.getScore(new int[]{5,3,4,3,6,6}));    // returns 0 = no combinations here
+    }
+
+    @Test
+    public void testOne() throws Exception {
+        Zonk zonk = new Zonk();
+
+        assertEquals(100, zonk.getScore(new int[]{1, 2, 3}));      // returns 100 = points from one 1
+        assertEquals(100, zonk.getScore(new int[]{2, 1, 3, 5, 6, 6}));      // returns 100 = points from one 1
+    }
+
+    // TODO: replace this test with small tests for all cases
+    @Test
+    public void test() throws Exception {
         Zonk zonk = new Zonk();
 
         assertEquals(100, zonk.getScore(new int[]{1, 2, 3}));      // returns 100 = points from one 1
         assertEquals(250, zonk.getScore(new int[]{3,4,1,1,5}));    // returns 250 = points from two 1 and one 5
         assertEquals(500, zonk.getScore(new int[]{2,3,2,3,3,2}));  // returns 500 = three of 2 + three of 3
         assertEquals(3050, zonk.getScore(new int[]{1,1,1,1,1,5})); // returns 3050 = five 1 + one 5
-        assertEquals(0, zonk.getScore(new int[]{2,3,4,3,6,6}));    // returns 0 = no combinations here
         assertEquals(400, zonk.getScore(new int[]{2,2,6,6,2,2}));  // returns 400 = four 2, this cannot be scored as three pairs
         assertEquals(750, zonk.getScore(new int[]{1,3,4,3,4,1}));  // returns 750 = three pairs
         assertEquals(600, zonk.getScore(new int[]{3,3,3,3}));      // returns 600 = four of 3

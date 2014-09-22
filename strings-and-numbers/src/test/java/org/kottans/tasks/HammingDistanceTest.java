@@ -12,10 +12,17 @@ import static org.junit.Assert.assertEquals;
 public class HammingDistanceTest {
 
     @Test
-    public void test() {
+    public void testEqualStrings() throws Exception {
         HammingDistance hd = new HammingDistance();
 
         assertEquals(0, hd.count("Java", "Java"));
+        assertEquals(0, hd.count("11111", "11111"));
+    }
+
+    @Test
+    public void test() throws Exception {
+        HammingDistance hd = new HammingDistance();
+
         assertEquals(3, hd.count("karolin", "kathrin"));
         assertEquals(3, hd.count("I like turtles", "I like turkeys"));
     }

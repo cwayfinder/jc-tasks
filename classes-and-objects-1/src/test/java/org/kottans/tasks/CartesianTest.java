@@ -11,7 +11,7 @@ import static org.junit.Assert.assertTrue;
 public class CartesianTest {
 
     @Test
-    public void testPointsOnLine() {
+    public void testPointsOnLine() throws Exception {
         Cartesian cartesian = new Cartesian();
 
         assertTrue(cartesian.arePointOnLine(new Point[]{
@@ -28,6 +28,11 @@ public class CartesianTest {
                 new Point(1, 2),
                 new Point(7, 4),
                 new Point(22, 9)}));
+    }
+
+    @Test
+    public void testPointsNotOnLine() throws Exception {
+        Cartesian cartesian = new Cartesian();
 
         assertFalse(cartesian.arePointOnLine(new Point[]{
                 new Point(1, 2),

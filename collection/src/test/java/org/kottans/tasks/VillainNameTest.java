@@ -41,9 +41,11 @@ import static org.junit.Assert.assertEquals;
 public class VillainNameTest {
 
     @Test
-    public void test() {
+    public void test() throws Exception {
         VillainName name = new VillainName();
 
         assertEquals("The Terrifying Teaspoon", name.get("November 18"));
     }
+
+    // TODO: add the rest of tests
 }

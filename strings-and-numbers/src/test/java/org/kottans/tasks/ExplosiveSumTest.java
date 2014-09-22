@@ -23,7 +23,7 @@ import static org.junit.Assert.assertEquals;
 public class ExplosiveSumTest {
 
     @Test
-    public void test() {
+    public void test() throws Exception {
         ExplosiveSum explosiveSum = new ExplosiveSum();
 
         assertArrayEquals(new int[][]{new int[]{1}}, explosiveSum.show(1));
@@ -60,7 +60,7 @@ public class ExplosiveSumTest {
     }
 
     @Test
-    public void test2() {
+    public void testWithOnePredefinedPartition() throws Exception {
         ExplosiveSum explosiveSum = new ExplosiveSum(new int[]{1});
 
         assertArrayEquals(new int[][]{new int[]{1}}, explosiveSum.show(1));
@@ -77,7 +77,7 @@ public class ExplosiveSumTest {
     }
 
     @Test
-    public void test3() {
+    public void testWithSeveralPredefinedPartitions() throws Exception {
         ExplosiveSum explosiveSum = new ExplosiveSum(new int[]{1, 2, 4});
 
         assertArrayEquals(new int[][]{new int[]{1}}, explosiveSum.show(1));

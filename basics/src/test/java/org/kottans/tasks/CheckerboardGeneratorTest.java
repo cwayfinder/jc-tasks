@@ -11,10 +11,15 @@ import static org.junit.Assert.assertArrayEquals;
 public class CheckerboardGeneratorTest {
 
     @Test
-    public void test() {
+    public void testOne() {
         CheckerboardGenerator generator = new CheckerboardGenerator();
 
         assertArrayEquals(new String[]{"[ ]"}, generator.generate(1));
+    }
+
+    @Test
+    public void testFive() {
+        CheckerboardGenerator generator = new CheckerboardGenerator();
 
         assertArrayEquals(new String[]{
                 "[ ][b][ ][b][ ]",
@@ -22,6 +27,11 @@ public class CheckerboardGeneratorTest {
                 "[ ][b][ ][b][ ]",
                 "[b][ ][b][ ][b]",
                 "[ ][b][ ][b][ ]"}, generator.generate(5));
+    }
+
+    @Test
+    public void testEight() {
+        CheckerboardGenerator generator = new CheckerboardGenerator();
 
         assertArrayEquals(new String[]{
                 "[ ][b][ ][b][ ][b][ ][b]",

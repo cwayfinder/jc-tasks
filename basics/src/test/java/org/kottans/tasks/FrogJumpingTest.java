@@ -13,10 +13,16 @@ import static org.junit.Assert.assertEquals;
 public class FrogJumpingTest {
 
     @Test
-    public void test() {
+    public void testNormalCase() throws Exception {
         FrogJumping frogJumping = new FrogJumping();
 
         assertEquals(3, frogJumping.count(new int[]{1, 2, 1, 5}));  // 1 -> 2 -> 5 -> out  steps = 3
+    }
+
+    @Test
+    public void testIndefiniteJumping() throws Exception {
+        FrogJumping frogJumping = new FrogJumping();
+
         assertEquals(-1, frogJumping.count(new int[]{1, -1}));  // 1 -> -1 -> 1 -> -1 -> .... steps = -1
     }
 }

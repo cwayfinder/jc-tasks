@@ -8,10 +8,15 @@ import static org.junit.Assert.assertNull;
 public class StringHelperTest {
 
     @Test
-    public void lastChar() {
+    public void testEmptyString() {
         StringHelper helper = new StringHelper();
 
         assertNull(helper.lastChar(""));
+    }
+
+    @Test
+    public void testNotEmptyString() {
+        StringHelper helper = new StringHelper();
 
         assertEquals('z', helper.lastChar("xyz"));
         assertEquals('4', helper.lastChar("1234"));
