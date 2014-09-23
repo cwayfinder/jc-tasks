@@ -77,4 +77,21 @@ Every 5 | 5 2 6 | 50 points
 Each die cannot be used in multiple combinations the same time, so three pairs of 2, 3 and 5 will worth you only 750 points (for three pairs), not 850 (for three pairs and two fives). But you can select multiple combinations, 2 2 2 1 6 will worth you 300 points (200 for three-of-kind '2' plus 100 for single '1' die)
 
 
+# Points On A Line #
+
+Given an array points (cartesian coordinates), return true if all of them can lie on a line.
+
+```java
+[[1,2], [7, 4], [22, 9]];                 // true
+[[1,2], [-3, -14], [22, 9]];              // false
+```
+
+
+# Sierpinski's Gasket #
+
+Write a function that takes an integer n and returns the nth iteration of the fractal known as Sierpinski's Gasket.
+
+Here are the first few iterations. The fractal is composed entirely of L and white-space characters; each character has one space between it and the next (or a newline).
+
+
 # [ThePrimeFactorsKata](http://www.butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata "ThePrimeFactorsKata") #

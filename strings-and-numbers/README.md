@@ -74,3 +74,31 @@ Selector | Specifity (`#id`,`.class`,`tagname`)
 `body #john span` | 1, 0, 2
 `menu .item #checkout.active` | 1, 2, 1
 `#foo div#bar.red .none` | 2, 2, 1
+
+
+# Explosive Sum #
+
+How many ways can you make the sum of a number?
+
+From wikipedia: https://en.wikipedia.org/wiki/Partition_(number_theory)
+
+In number theory and combinatorics, a partition of a positive integer n, also called an integer partition, is a way of writing n as a sum of positive integers. Two sums that differ only in the order of their summands are considered the same partition. (If order matters, the sum becomes a composition.) For example, 4 can be partitioned in five distinct ways:
+
+4
+3 + 1
+2 + 2
+2 + 1 + 1
+1 + 1 + 1 + 1
+
+
+# Hamming Distance #
+
+The Hamming Distance is a measure of similarity between two strings of equal length. Complete the method so that it returns the number of positions where the input strings do not match.
+
+Example:
+
+```java
+hamming("I like turtles","I like turkeys") //returns 3
+```
+
+You can assume that the two input strings are of equal length.
