@@ -12,6 +12,24 @@ Create a method that returns an array of numbers from 1 to 100.
 The value at the index of the array for number should be 'Fizz' if it is divisible by 3, 'Buzz' if divisible by 5, 'FizzBuzz' if it divisible by both 3 and 5, or the number if it is not divisible by 3 or 5.
 
 
+# Last #
+
+Remove all negative numbers from an array.
+
+```java
+filter( [1, -1, 4, -4, -3, -4, 5, 6] ) // returns [1, 4, 5, 6]
+```
+
+
+# Filter #
+
+Filter an array.
+
+```java
+last( [1,2,3,4] ) // returns 4
+```
+
+
 # Subarrays #
 
 Write a function that returns all of the sublists of a list or Array.
